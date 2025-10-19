@@ -1,0 +1,114 @@
+MonSiteJeuxCinema/
+   index.html   ← page principale
+   assets/
+      css/
+         style.css   ← pour tes styles
+      js/
+         script.js  ← pour petites animations ou effets
+   images/       ← pour tes images ou captures d’écran
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeux & Cinéma</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Bienvenue sur le site des fans de Dark Souls, Metal Gear Rising et cinéma</h1>
+  <p>Découvre les infos, GIF et petits secrets de tes jeux et films préférés !</p>
+  <a href="#contenu" class="btn">Voir le contenu</a>
+</header>
+
+<main id="contenu">
+  <section>
+    <h2>Dark Souls</h2>
+    <p>Secrets, boss et astuces pour survivre dans le monde impitoyable de Lordran.</p>
+    <img src="images/darksouls.jpg" alt="Dark Souls" width="300">
+  </section>
+
+  <section>
+    <h2>Metal Gear Rising</h2>
+    <p>Explosions, style Raiden et combats déchaînés !</p>
+    <img src="images/mgr.jpg" alt="Metal Gear Rising" width="300">
+  </section>
+
+  <section>
+    <h2>Cinéma</h2>
+    <p>Films qui inspirent les jeux vidéo, analyses et recommandations.</p>
+    <img src="images/cinema.jpg" alt="Cinéma" width="300">
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Mon Site Jeux & Cinéma</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #111;  /* fond sombre style Dark Souls */
+  color: #fff;
+  margin: 0;
+}
+
+/* Header */
+header {
+  padding: 50px;
+  background: #222;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Bouton */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff4081;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f50057;
+}
+
+/* Sections */
+section {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 600px;
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+/* Images */
+section img {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #222;
+}
+// Faire clignoter le bouton au passage de la souris
+const btn = document.querySelector('.btn');
+btn.addEventListener('mouseover', () => {
+  btn.style.transform = 'scale(1.1)';
+});
+btn.addEventListener('mouseout', () => {
+  btn.style.transform = 'scale(1)';
+});
